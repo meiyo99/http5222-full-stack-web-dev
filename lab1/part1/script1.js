@@ -1,7 +1,7 @@
 var groceries =  ["apples", "oranges", "cherries"];
 
-export function addItem(item) {
-    groceries.push(item);
+export function addItem(itemName) {
+    groceries.push(itemName);
     console.log(groceries);
 }
 
