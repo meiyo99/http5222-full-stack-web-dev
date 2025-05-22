@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{title} | Biblichor
+        link(rel="stylesheet", href="/css/styles.css")
+    body 
+        header#header
+            nav.navbar
+                a.brand(href="/") Biblichor
+                ul.nav-links
+                    li
+                        a(href="/") Home
+                    li
+                        a(href="/about") About Us
+                    li
+                        a(href="#") Products
+                    li
+                        a(href="#") Contact  
+        main#main 
+            block layout-content 
+        footer#footer 
+            p &copy; Biblichor 2025. All rights reserved.

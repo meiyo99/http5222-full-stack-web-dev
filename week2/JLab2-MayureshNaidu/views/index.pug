@@ -1,0 +1,54 @@
+extends layout 
+
+block layout-content 
+    section.hero
+        .hero-content
+            h1 Discover Your Next Story
+            p At Biblichor, we believe every book holds a new world. Explore our curated collections.
+            a.btn.btn-primary(href="#featured-books") Explore Books
+
+    section.categories
+        h2 Browse by Category
+        ul.category-list
+            li
+                a(href="#") Fiction
+            li
+                a(href="#") Science Fiction & Fantasy
+            li
+                a(href="#") Mystery & Thriller
+            li
+                a(href="#") Non-Fiction
+            li
+                a(href="#") Young Adult
+
+    section#featured-books.featured-products
+        h2 Featured Books
+        .product-grid
+            .product-card
+                img(src="/images/1.jpg")
+                .product-info
+                h3 The Midnight Library
+                p Matt Haig
+                p.price $15.99
+                button.btn Add to Cart
+            .product-card
+                img(src="/images/2.jpg")
+                .product-info
+                h3 Project Hail Mary
+                p Andy Weir
+                p.price $18.50
+                button.btn Add to Cart
+            .product-card
+                img(src="/images/3.jpg")
+                .product-info
+                h3 Klara and the Sun
+                p Kazuo Ishiguro
+                p.price $16.75
+                button.btn Add to Cart
+            .product-card
+                img(src="/images/4.jpg")
+                .product-info
+                h3 The Vanishing Half
+                p Brit Bennett
+                p.price $14.99
+                button.btn Add to Cart

@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fdfaf6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Merriweather', serif;
+  color: #4a3b31;
+  margin-bottom: 0.75em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: #8c6b5d;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #6a5043;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.navbar {
+  background: #fffaf0;
+  color: #4a3b31;
+  padding: 1rem 0;
+  border-bottom: 2px solid #e0d8cc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.navbar-brand {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #5a453a;
+}
+
+.navbar-brand:hover {
+  color: #4a3b31;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+main.container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+footer {
+  background: #fffaf0;
+  color: #5a453a;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 2px solid #e0d8cc;
+}
+
+footer p {
+  margin-bottom: 0.5em;
+  font-size: 0.9em;
+}
+
+.hero {
+  color: #ffffff;
+  padding: 60px 0;
+  text-align: center;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.hero-content {
+  background-color: #40332ab3;
+  display: inline-block;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+  margin-bottom: 0.5em;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+.btn {
+  display: inline-block;
+  background: #8c6b5d;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background: #6a5043;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #a07e6e;
+}
+.btn-primary:hover {
+  background: #8c6b5d;
+}
+
+.featured-products h2, .categories h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.product-card {
+  background: #ffffff;
+  border: 1px solid #e0d8cc;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+  width: 100%;
+  height: 300px;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-info h3, .product-info h4 {
+  font-size: 1.2em;
+  color: #5a453a;
+  margin-bottom: 0.3em;
+}
+.product-info h4 { 
+  font-size: 1.1em; 
+}
+
+
+.product-info p {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 0.5em;
+}
+
+.product-info .price {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #3c2e25;
+  margin-bottom: 1em;
+}
+
+.category-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.category-list li a {
+  display: block;
+  padding: 10px 20px;
+  background: #f5f0e9;
+  border: 1px solid #e0d8cc;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-list li a:hover {
+  background-color: #8c6b5d;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* About Page */
+.about-page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border: 3px solid #e0d8cc;
+}
+
+.about-page p {
+  font-size: 1.1em;
+  margin-bottom: 1.5em;
+  text-align: justify;
+}
+
+.about-page h2 {
+  margin-top: 1.5em;
+  font-size: 1.8em;
+  border-bottom: 1px solid #e0d8cc;
+  padding-bottom: 0.3em;
+}
+
+.about-page ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 1.5em;
+}
+
+.about-page ul li {
+  margin-bottom: 0.5em;
+  font-size: 1.05em;
+}
