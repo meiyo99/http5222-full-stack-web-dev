@@ -1,0 +1,20 @@
+extends layout
+
+block main-content
+  -
+    let libraryName = library.querySelector("name").textContent;
+    let description = library.querySelector("description").textContent;
+    
+    let addressMatch = description.match(/Address:\s*([^<\n]+)/i);
+    let phoneMatch = description.match(/Phone:\s*([^<\n]+)/i);
+    
+    let address = addressMatch ? addressMatch[1].trim() : "Address not available";
+    let phone = phoneMatch ? phoneMatch[1].trim() : "Phone not available";
+    
+  h1 #{libraryName}
+  p 
+    strong Address: 
+    | #{address}
+  p 
+    strong Phone Number: 
+    | #{phone}

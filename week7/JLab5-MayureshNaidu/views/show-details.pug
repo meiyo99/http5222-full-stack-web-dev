@@ -1,0 +1,41 @@
+extends layout 
+
+block main-content 
+  h1.page-title #{show.title} (#{show.year})
+  
+  if show.tagline
+    h2.tagline #{show.tagline}
+  
+  if show.overview
+    h3 Overview
+    p.overview #{show.overview}
+  else
+    p No overview available.
+  
+  h3 Show Details
+  ul
+    li
+      strong Year: 
+      span #{show.year || 'N/A'}
+    li
+      strong Runtime: 
+      span #{show.runtime || 'N/A'} minutes
+    li
+      strong Network: 
+      span #{show.network || 'N/A'}
+    li
+      strong Status: 
+      span #{show.status || 'N/A'}
+    if show.genres && show.genres.length > 0
+      li
+        strong Genres: 
+        span #{show.genres.join(', ')}
+    if show.rating
+      li
+        strong Rating: 
+        span #{show.rating}/10
+  
+  div.navigation
+    a(href="/anticipated") ← Back to Anticipated Shows
+    span  | 
+    a(href="/") Home

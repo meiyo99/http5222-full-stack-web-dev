@@ -1,0 +1,42 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title #{title} | Test App
+    link(rel="stylesheet", href="/css/styles.css")
+    block scripts 
+      script(async, defer, src="/js/common.js")
+  body
+    header#header 
+      h2.site-name 
+        a(href="/") Test App 
+      include includes/nav.pug
+    main#main 
+      //- Dynamic main content here
+      block layout-content
+    footer#footer 
+      p &copy; Copyright HTTP5222, 2025.
+
+//-
+  html(lang="en")
+    head
+  body
+
+  would compile to:
+
+  <html lang="en">
+    <head></head>
+  </html>
+  <body></body>
+
+  html(lang="en")
+    head
+     body
+
+  would compile to: 
+
+  <html lang="en">
+    <head>
+      <body></body>
+    </head>
+  </html>

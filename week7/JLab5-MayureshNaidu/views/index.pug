@@ -1,0 +1,11 @@
+extends layout 
+
+block main-content 
+  h1.page-title Hello! 
+  h2 Today's trending movies 
+  each m in movies
+    div 
+      h3 
+        a(href=`/movie/${m.movie.ids.imdb}/studios`) #{m.movie.title} (#{m.movie.year})
+      img(src=`https://${m.movie.images.poster[0]}`, alt=`Poster for ${m.movie.title}`, height="300")
+      div: a(href=`http://imdb.com/title/${m.movie.ids.imdb}`) View on IMDb

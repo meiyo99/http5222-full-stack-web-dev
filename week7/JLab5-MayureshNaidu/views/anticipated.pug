@@ -1,0 +1,14 @@
+extends layout 
+
+block main-content 
+  h1.page-title Most Anticipated Shows
+  if shows && shows.length > 0
+    each item in shows
+      div.show-item
+        h3 
+          a(href=`/show/${item.show.ids.trakt}`) #{item.show.title}
+        p Year: #{item.show.year || 'N/A'}
+        p #{item.list_count} people are anticipating this show
+        hr
+  else
+    p No anticipated shows found.

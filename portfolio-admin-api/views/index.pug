@@ -1,0 +1,73 @@
+extends layout 
+
+block content 
+    section.projects-section
+        h2 My Projects
+        
+        form.add-form(action="/projects" method="POST")
+            h3 Add New Project
+            .form-group
+                input(type="text" name="name" placeholder="Project Name" required)
+                select(name="technology" required)
+                    option(value="") Select Technology
+                    option(value="JavaScript") JavaScript
+                    option(value="Python") Python
+                    option(value="Java") Java
+                    option(value="React") React
+                    option(value="Node.js") Node.js
+                    option(value="Other") Other
+                select(name="status")
+                    option(value="Planning") Planning
+                    option(value="In Progress") In Progress
+                    option(value="Completed") Completed
+            button.btn-primary(type="submit") Add Project
+        
+        .items-grid
+            each project in projects 
+                .item-card
+                    .card-header
+                        h4= project.name
+                        span.status(class=`status-${project.status.toLowerCase().replace(' ', '-')}`)= project.status
+                    .card-body
+                        p 
+                            strong Technology: 
+                            span= project.technology
+                        p 
+                            strong Started: 
+                            span= project.startDate.toLocaleDateString()
+                    .card-actions
+                        form.delete-form(action=`/projects/delete/${project._id}` method="POST")
+                            button.btn-danger(type="submit") Remove
+
+    section.skills-section
+        h2 Technical Skills
+        
+        form.add-form(action="/skills" method="POST")
+            h3 Add New Skill
+            .form-group
+                input(type="text" name="technology" placeholder="Technology/Tool Name" required)
+                select(name="category" required)
+                    option(value="") Select Category
+                    option(value="Programming") Programming Language
+                    option(value="Framework") Framework/Library
+                    option(value="Database") Database
+                    option(value="Tool") Development Tool
+                select(name="experience")
+                    option(value="Beginner") Beginner
+                    option(value="Intermediate") Intermediate
+                    option(value="Advanced") Advanced
+            button.btn-secondary(type="submit") Add Skill
+        
+        .items-grid
+            each skill in skills 
+                .item-card
+                    .card-header
+                        h4= skill.technology
+                        span.experience(class=`exp-${skill.experience.toLowerCase()}`)= skill.experience
+                    .card-body
+                        p 
+                            strong Category: 
+                            span= skill.category
+                    .card-actions
+                        form.delete-form(action=`/skills/delete/${skill._id}` method="POST")
+                            button.btn-danger(type="submit") Remove

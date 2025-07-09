@@ -1,0 +1,5 @@
+nav(aria-label="Main navigation")
+  ul 
+    //- In the foreach below, "link" is the temporary variable in the array "links"
+    each link in links
+      li: a(href=link.path) #{link.name}
